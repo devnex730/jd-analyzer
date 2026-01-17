@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Analyzer</title>
+    <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
+</head>
+<body>
+    <main>
+        <section class="view1" id="home">
+            <button class="btn1"> 🎇AI- Powered Analysis</button>
+            <div class="head">
+                <h2 class="h1">Decode Job Descriptions</h2>
+                <h2 class="h2">Land Your Dream Job </h2>
+
+            </div>
+            <div class="info">Analyze job descriptions instantly, extract key requirements, and build tailored resumes that get you noticed by recruiters.</div>
+            <div class="button">
+                <a href="#jd"><button class="btn2">
+                    📃Analyze JD Now
+                </button> </a>
+                <a href="/make_resume"><button class="btn3">
+                    📌Build Resume 
+                </button></a>
+            </div>
+
+        </section>
+        <section class="analysis">
+            <div class="b1">
+                <h1>95%</h1> 
+                <h3>Match Accuracy</h3>
+            </div>
+            <div class="b2">
+                <h1>2min</h1> 
+                <h3>Avg. Analysis Time </h3>
+            </div>
+        </section>
+        <section class="features" id="feature">
+            <button class="btn4">✨Features</button>
+            <div class="head2">
+                <h1>Everything You Need to <span class="p1">Succeed</span> </h1>
+            </div>
+            <div class="info2">Powerful tools designed to streamline your job application process and increase your chances of landing interviews.</div>
+            
+            <div class="featu">
+
+            <div class="box1">
+                <img src="{% static 'api/images/ats.png' %}" alt="">
+                <h1>Resume Optimization</h1>
+                <h3>Get tailored suggestions to optimize your resume for specific job applications.</h3>
+            </div>
+            <div class="box2">
+                <img src="{% static 'api/images/ms.png' %}" alt="">
+                <h1>Skill Matching
+</h1>
+                <h3>Instantly identify which skills you have and which ones you need to develop for the role.</h3>
+            </div></div>
+            <div class="featu">
+            <div class="box3">
+                <img src="{% static 'api/images/rb.png' %}" alt="">
+                <h1>Instant Results
+</h1>
+                <h3>Get comprehensive analysis in seconds, not hours. Save time on your job search.</h3>
+            </div>
+            <div class="box4"><img src="{% static 'api/images/atsb.png' %}" alt="">
+                <h1>Keyword Extraction
+</h1>
+                <h3>Identify ATS-friendly keywords to include in your resume and cover letter.
+
+</h3></div></div>
+        </section>
+
+        <section class="jd" id="jd">
+            <button class="btn5">📥 JD Analyzer</button>
+            <h1>Analyze Any <span class="p2">Job Description</span> </h1>
+            <p>Paste any job description below and get instant insights on required skills, experience, and keywords.</p>
+            <br><div class="jdanalyze">
+                <div class="bo1">
+                    <h1>Job Description</h1>
+                    <textarea name="" id="jdInput" cols="40" rows="10" placeholder="Paste Job description..."></textarea>
+                    <button class="btn6" id="analyzeBtn">Analyze JD</button>
+                    
+                </div>
+                <div class="bo2">
+    <h1>Analysis</h1>
+    <div id="skills" class="skills">
+<h4 id="skills-p">
+        Paste a job Description and click on analyze to see results
+    </h4>    </div>
+    <div id="experience" >
+    </div>
+    <div id="education"></div>
+    <div id="keywords"></div>
+</div>
+                </div>
+            </div>
+        </section>
+    </main><br><hr>
+    <footer>
+        <div class="footnav">
+            <h1>ATS<span class="pa1">smart</span></h1>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#jd">JD Analyzer</a>
+                <a href="/resume.html">Resume Builder</a>
+                <a href="#feature">Features</a>
+            </div>
+            <div class="social">
+            </div>
+        </div><hr>
+        <h6>© 2025 ATSsmart. All rights reserved.</h6>
+    </footer>
+    <script src="{% static 'api/js/script.js' %}"></script>
+
+</body>
+</html>

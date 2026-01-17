@@ -1,0 +1,551 @@
+:root {
+  --Primary: #3EE0CF;
+  --Dark-text: #0a2050;
+  --Secondary-text: #2BC8CF;
+  --Background: #080C16;
+  --White: #FFFFFF;
+  --gray: #cecaca;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--Background);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+main .view1 {
+  margin-top: 4rem;
+  text-align: center;
+  color: white;
+}
+main .view1 button {
+  border: none;
+  padding: 0.7rem;
+  margin: 10px;
+  outline: none;
+}
+main .view1 .btn1 {
+  background-color: rgba(43, 199, 207, 0.2666666667);
+  color: var(--Secondary-text);
+  border: 1px solid rgba(62, 224, 208, 0.7411764706);
+  font-size: 1.3rem;
+  padding: 0.7rem;
+  border-radius: 25px;
+}
+main .view1 .head {
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+main .view1 .head .h2 {
+  color: var(--Secondary-text);
+}
+main .view1 .info {
+  margin: 1.8rem 0rem;
+  color: var(--gray);
+  line-height: 1.7rem;
+}
+main .view1 .button {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 1rem;
+}
+main .view1 .button .btn2 {
+  border-radius: 10px;
+  color: var(--Dark-text);
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: var(--Secondary-text);
+  transition: all 0.5s ease;
+}
+main .view1 .button .btn2 a {
+  text-decoration: none;
+}
+main .view1 .button .btn2:hover {
+  transform: scale(1.03);
+  box-shadow: 1px 2px 10px white;
+}
+main .view1 .button .btn3 {
+  border-radius: 10px;
+  border: 1px solid var(--Secondary-text);
+  background: radial-gradient(circle, rgba(43, 199, 207, 0.4588235294), rgba(10, 32, 80, 0), rgba(10, 32, 80, 0), rgba(10, 32, 80, 0));
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+main .view1 .button .btn3:hover {
+  transform: scale(1.03);
+  background-color: rgba(43, 199, 207, 0.4431372549);
+}
+main .analysis {
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+  margin: 2rem 1rem;
+  gap: 2rem;
+  justify-content: center;
+}
+main .analysis .b1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .analysis .b1 h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 7px white;
+  text-align: center;
+}
+main .analysis .b1 h3 {
+  color: #b1afaf;
+  font-size: 1.2rem;
+}
+main .analysis .b2 {
+  display: flex;
+  flex-direction: column;
+}
+main .analysis .b2 h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 7px white;
+  text-align: center;
+}
+main .analysis .b2 h3 {
+  color: #b1afaf;
+  font-size: 1.2rem;
+}
+main .features {
+  text-align: center;
+  margin-top: 5rem;
+}
+main .features button {
+  border: none;
+  padding: 0.7rem;
+  margin: 10px;
+  outline: none;
+}
+main .features .btn4 {
+  background-color: rgba(43, 199, 207, 0.2666666667);
+  color: var(--Secondary-text);
+  border: 1px solid rgba(62, 224, 208, 0.7411764706);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.7rem 2rem;
+  border-radius: 25px;
+}
+main .features .head2 {
+  color: white;
+}
+main .features .head2 .p1 {
+  color: var(--Secondary-text);
+}
+main .features .info2 {
+  color: gray;
+  margin: 1rem 2rem;
+  font-size: 1.3rem;
+}
+main .features .featu {
+  display: flex;
+  flex-direction: column;
+}
+main .features .featu .box1 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(62, 224, 208, 0.062745098);
+  border-radius: 20px;
+  margin: 2rem;
+  transition: all 0.3s ease-in;
+  border: 1px solid rgba(43, 199, 207, 0.2274509804);
+}
+main .features .featu .box1 img {
+  height: 12rem;
+  margin: 1rem;
+  border-radius: 20px;
+}
+main .features .featu .box1 h1 {
+  color: white;
+  margin: 1rem 0rem;
+  font-size: 1.5rem;
+}
+main .features .featu .box1 h3 {
+  color: gray;
+  margin: 1rem;
+}
+main .features .featu .box2 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(62, 224, 208, 0.062745098);
+  border-radius: 20px;
+  margin: 2rem;
+  transition: all 0.3s ease-in;
+  border: 1px solid rgba(43, 199, 207, 0.2274509804);
+}
+main .features .featu .box2 img {
+  height: 12rem;
+  margin: 1rem;
+  border-radius: 20px;
+}
+main .features .featu .box2 h1 {
+  color: white;
+  margin: 1rem 0rem;
+  font-size: 1.5rem;
+}
+main .features .featu .box2 h3 {
+  color: gray;
+  margin: 1rem;
+}
+main .features .featu .box3 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(62, 224, 208, 0.062745098);
+  border-radius: 20px;
+  margin: 2rem;
+  transition: all 0.3s ease-in;
+  border: 1px solid rgba(43, 199, 207, 0.2274509804);
+}
+main .features .featu .box3 img {
+  height: 12rem;
+  margin: 1rem;
+  border-radius: 20px;
+}
+main .features .featu .box3 h1 {
+  color: white;
+  margin: 1rem 0rem;
+  font-size: 1.5rem;
+}
+main .features .featu .box3 h3 {
+  color: gray;
+  margin: 1rem;
+}
+main .features .featu .box4 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(62, 224, 208, 0.062745098);
+  border-radius: 20px;
+  margin: 2rem;
+  transition: all 0.3s ease-in;
+  border: 1px solid rgba(43, 199, 207, 0.2274509804);
+}
+main .features .featu .box4 img {
+  height: 12rem;
+  margin: 1rem;
+  border-radius: 20px;
+}
+main .features .featu .box4 h1 {
+  color: white;
+  margin: 1rem 0rem;
+  font-size: 1.5rem;
+}
+main .features .featu .box4 h3 {
+  color: gray;
+  margin: 1rem;
+}
+main .features .featu .box1:hover {
+  transform: scale(1.01);
+  border: 1px solid #2BC8CF;
+}
+main .features .featu .box2:hover {
+  transform: scale(1.01);
+  border: 1px solid #2BC8CF;
+}
+main .features .featu .box3:hover {
+  transform: scale(1.01);
+  border: 1px solid #2BC8CF;
+}
+main .features .featu .box4:hover {
+  transform: scale(1.01);
+  border: 1px solid #2BC8CF;
+}
+main .jd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+}
+main .jd button {
+  border: none;
+  padding: 0.7rem;
+  margin: 10px;
+  outline: none;
+}
+main .jd .btn5 {
+  background-color: rgba(43, 199, 207, 0.2666666667);
+  color: var(--Secondary-text);
+  border: 1px solid rgba(62, 224, 208, 0.7411764706);
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 25px;
+}
+main .jd h1 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+main .jd h1 .p2 {
+  color: var(--Secondary-text);
+}
+main .jd p {
+  text-align: center;
+  color: gray;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: 1rem;
+}
+main .jd .jdanalyze {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+main .jd .jdanalyze .bo1 {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  border: 1px solid rgba(43, 199, 207, 0.3960784314);
+  padding: 1rem;
+  border-radius: 20px;
+}
+main .jd .jdanalyze .bo1 h1 {
+  font-size: 1.4rem;
+  color: var(--White);
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+main .jd .jdanalyze .bo1 textarea {
+  background-color: rgba(8, 12, 22, 0.631372549);
+  border: 1px solid rgba(62, 224, 208, 0.1725490196);
+  margin: 1rem 0rem;
+  border-radius: 20px;
+  color: white;
+  padding: 1rem;
+}
+main .jd .jdanalyze .bo1 textarea:hover {
+  border: 1px solid rgba(62, 224, 208, 0.3843137255);
+}
+main .jd .jdanalyze .bo1 .btn6 {
+  border-radius: 10px;
+  background-color: var(--Secondary-text);
+  transition: all 0.3s ease;
+  box-shadow: 1px 2px 10px rgb(34, 34, 34);
+}
+main .jd .jdanalyze .bo1 .btn6:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 2px 10px white;
+}
+main .jd .jdanalyze .bo1 hr {
+  color: white;
+}
+main .jd .jdanalyze .bo2 {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  border: 1px solid rgba(43, 199, 207, 0.3960784314);
+  padding: 1rem;
+  border-radius: 20px;
+}
+main .jd .jdanalyze .bo2 h1 {
+  font-size: 1.4rem;
+  color: var(--White);
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+main .jd .jdanalyze .bo2 .skills {
+  background-color: rgba(8, 12, 22, 0.631372549);
+  border: 1px solid rgba(62, 224, 208, 0.1725490196);
+  border-radius: 20px;
+  padding: 1rem;
+}
+main .jd .jdanalyze .bo2 .skills #skills-p {
+  background-color: rgba(43, 199, 207, 0.2666666667);
+  color: var(--gray);
+  border: 1px solid rgba(62, 224, 208, 0.7411764706);
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-radius: 25px;
+}
+main .jd .jdanalyze .bo2 .skills .skill-btn {
+  background-color: rgba(43, 199, 207, 0.2666666667);
+  color: var(--gray);
+  border: 1px solid rgba(62, 224, 208, 0.7411764706);
+  font-size: 0.8rem;
+  padding: 0.7rem;
+  border-radius: 25px;
+}
+main .jd .jdanalyze .bo2 #experience p {
+  background-color: rgba(43, 199, 207, 0.2666666667);
+  color: var(--Secondary-text);
+  border: 1px solid rgba(62, 224, 208, 0.7411764706);
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-radius: 25px;
+}
+main .jd .jdanalyze .bo2 #experience h2 {
+  color: var(--gray);
+  line-height: 1rem;
+  font-size: 1rem;
+}
+main .jd .jdanalyze .bo2 #education p {
+  background-color: rgba(43, 199, 207, 0.2666666667);
+  color: var(--Secondary-text);
+  border: 1px solid rgba(62, 224, 208, 0.7411764706);
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-radius: 25px;
+}
+main .jd .jdanalyze .bo2 #education h2 {
+  color: var(--gray);
+  line-height: 1rem;
+  font-size: 1rem;
+}
+main .jd .jdanalyze .bo2 #keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  max-width: 25rem;
+}
+main .jd .jdanalyze .bo2 #keywords h2 {
+  width: 100%;
+  color: var(--gray);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+main .jd .jdanalyze .bo2 #keywords span {
+  background-color: rgba(43, 199, 207, 0.2666666667);
+  color: var(--Secondary-text);
+  border: 1px solid rgba(62, 224, 208, 0.7411764706);
+  font-size: 1rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 25px;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  display: inline-block;
+}
+
+@media (min-width: 600px) {
+  main .view1 .btn1 {
+    margin-bottom: 2.5rem;
+  }
+  main .view1 .head {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+  main .view1 .info {
+    font-size: 1.3rem;
+  }
+  main .view1 .button {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+  }
+  main .features .btn4 {
+    font-size: 2rem;
+  }
+  main .features .head2 {
+    font-size: 1.8rem;
+  }
+  main .features .info2 {
+    font-size: 1.4rem;
+  }
+  main .features .featu {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+  }
+  main .features .featu .box1 {
+    flex: 1;
+  }
+  main .features .featu .box2 {
+    flex: 1;
+  }
+  main .features .featu .box3 {
+    flex: 1;
+  }
+  main .features .featu .box4 {
+    flex: 1;
+  }
+  main .jd h1 {
+    font-size: 3rem;
+  }
+  main .jd p {
+    font-size: 1.5rem;
+  }
+  main .jd .jdanalyze {
+    flex-direction: row;
+  }
+}
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+footer .footnav {
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 0rem;
+}
+footer .footnav h1 {
+  color: gray;
+}
+footer .footnav h1 .pa1 {
+  color: #2BC8CF;
+}
+footer .footnav .links {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+footer .footnav .links a {
+  text-decoration: none;
+  color: gray;
+  margin: 0rem 1rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+}
+footer .footnav .links a:hover {
+  color: var(--Primary);
+}
+footer .footnav .social {
+  display: flex;
+  flex-direction: column;
+}
+footer .footnav .social #git {
+  color: white;
+}
+footer h6 {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+@media (min-width: 600px) {
+  footer .footnav .links {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */

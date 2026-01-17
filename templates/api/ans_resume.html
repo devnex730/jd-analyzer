@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ resume.personal.name }} - Resume</title>
+
+    <style>
+        /* ===== DOWNLOAD BUTTON (SCREEN ONLY) ===== */
+        .download-wrapper {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download-btn {
+            padding: 12px 26px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, #000, #333);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        /* Hover animation */
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(135deg, #111, #444);
+        }
+
+        /* Click animation */
+        .download-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===== PRINT MODE ===== */
+        @media print {
+            .download-wrapper {
+                display: none;
+            }
+        }
+
+
+        /* ===== A4 PAGE SETUP ===== */
+        @page {
+            size: A4;
+            margin: 18mm 16mm 18mm 16mm;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11.5pt;
+            line-height: 1.55;
+            color: #000;
+        }
+
+        .resume {
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            text-align: center;
+            margin-bottom: 8mm;
+        }
+
+        .header h1 {
+            font-size: 20pt;
+            margin-bottom: 2mm;
+        }
+
+        .header p {
+            font-size: 10.5pt;
+        }
+
+        /* ===== SECTION TITLES ===== */
+        h2 {
+            font-size: 12pt;
+            margin-top: 8mm;
+            margin-bottom: 3mm;
+            padding-bottom: 1.5mm;
+            border-bottom: 1px solid #000;
+            text-transform: uppercase;
+        }
+
+        /* ===== TEXT ===== */
+        p {
+            margin: 1.5mm 0;
+        }
+
+        /* ===== LISTS ===== */
+        ul {
+            margin: 2mm 0 4mm 6mm;
+            padding-left: 4mm;
+        }
+
+        li {
+            margin-bottom: 2mm;
+        }
+
+        .block {
+            margin-bottom: 4mm;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>{{ resume.personal.name }}</h1>
+            <p>
+                {{ resume.personal.location }} |
+                {{ resume.personal.phone }} |
+                {{ resume.personal.email }}
+            </p>
+        </div>
+
+        <!-- INTRODUCTION -->
+        {% if resume.summary %}
+        <h2>Introduction</h2>
+        <p>{{ resume.summary }}</p>
+        {% endif %}
+
+        <!-- EDUCATION -->
+        {% if resume.education %}
+        <h2>Education</h2>
+        <div class="block">
+            <p class="bold">
+                {{ resume.education.degree }}
+                {% if resume.education.year %}
+                ({{ resume.education.year }})
+                {% endif %}
+            </p>
+            <p>{{ resume.education.college }}</p>
+            {% if resume.education.school %}
+            <p>{{ resume.education.school }}</p>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <!-- EXPERIENCE -->
+        {% if resume.experience %}
+        <h2>Experience</h2>
+        {% for exp in resume.experience %}
+        <div class="block">
+            <p class="bold">{{ exp.job_title }}</p>
+            <p>{{ exp.company }}</p>
+            <ul>
+                <li>{{ exp.description }}</li>
+            </ul>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+
+        <!-- PROJECTS -->
+        {% if resume.projects %}
+        <h2>Projects</h2>
+        <ul>
+            {% for project in resume.projects %}
+            <li>{{ project }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+
+        {% if resume.skills %}
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in resume.skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+    </div>
+
+    {% if preview %}
+    <hr style="margin-top:20px">
+
+    <div class="download-wrapper">
+        <button class="download-btn" onclick="window.print()">
+            ⬇ Download PDF
+        </button>
+    </div>
+    {% endif %}
+
+</body>
+
+</html>

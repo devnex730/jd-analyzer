@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Builder</title>
+
+  <style>
+    :root {
+      --primary: #2bc7cf;
+      --primary-soft: rgba(43, 199, 207, 0.15);
+      --bg-dark: #020b0d;
+      --text-light: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.65);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #041b1f, var(--bg-dark));
+      font-family: system-ui, sans-serif;
+      color: var(--text-light);
+    }
+
+    main {
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .view2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .btn7 {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 0.8rem;
+      font-size: 0.75rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ================= FORM ================= */
+
+    .resumeform {
+      padding: 0 1rem 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .form-section {
+      background: var(--primary-soft);
+      border: 1px solid var(--primary);
+      border-radius: 18px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .form-section h2 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      margin-bottom: 0.2rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.55rem 0.6rem;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      background: rgba(0, 0, 0, 0.45);
+      color: var(--text-light);
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 8px rgba(43, 199, 207, 0.6);
+    }
+
+    .btn8 {
+      margin-top: 1rem;
+      align-self: center;
+      background: linear-gradient(135deg, #2bc7cf, #169fa6);
+      color: #001416;
+      border: none;
+      border-radius: 999px;
+      padding: 0.75rem 1.6rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn8:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(43, 199, 207, 0.55);
+    }
+
+    /* ============== DESKTOP VIEW ============== */
+    @media (min-width: 600px) {
+      main {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .resumeform {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section class="view2">
+      <button class="btn7">Resume Builder</button>
+      <h1>Create Your Perfect <span>Resume</span></h1>
+      <p>Build a professional resume that stands out. Fill in your details and download it in seconds.</p>
+    </section>
+  </main>
+
+  <div class="resumeform">
+    <form id="resumeform">
+
+      <div class="form-section">
+        <h2>Personal Information</h2>
+        <input type="text" name="full_name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <input type="text" name="location" placeholder="City, Country">
+      </div>
+
+      <div class="form-section">
+        <h2>Professional Summary</h2>
+        <textarea name="summary" placeholder="Write a short summary about yourself"></textarea>
+      </div>
+
+      <div class="form-section">
+        <h2>Skills</h2>
+        <textarea name="skills" placeholder="HTML, CSS, JavaScript, React, Django..."></textarea>
+      </div>
+
+      <div class="form-section grid-2">
+        <div>
+          <h2>Work Experience</h2>
+          <input type="text" name="job_title" placeholder="Job Title">
+          <input type="text" name="company" placeholder="Company Name">
+          <textarea name="experience_desc" placeholder="Responsibilities & achievements"></textarea>
+        </div>
+
+        <div>
+          <h2>Education</h2>
+          <input type="text" name="degree" placeholder="Degree">
+          <input type="text" name="college" placeholder="College / University">
+          <input type="text" name="year" placeholder="Year of Passing">
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Projects</h2>
+        <textarea name="projects" placeholder="Project name + description"></textarea>
+      </div>
+
+      <button type="submit" class="btn8">Generate Resume</button>
+
+    </form>
+  </div>
+
+  <script src="{% static 'api/js/resume.js' %}"></script>
+</body>
+</html>
