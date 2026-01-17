@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -193,9 +194,18 @@
       <div class="form-section grid-2">
         <div>
           <h2>Work Experience</h2>
-          <input type="text" name="job_title" placeholder="Job Title">
-          <input type="text" name="company" placeholder="Company Name">
-          <textarea name="experience_desc" placeholder="Responsibilities & achievements"></textarea>
+
+          <div id="experience-container">
+            <div class="experience-block">
+              <input type="text" name="job_title[]" placeholder="Job Title">
+              <input type="text" name="company[]" placeholder="Company Name">
+              <textarea name="experience_desc[]" placeholder="Responsibilities & achievements"></textarea>
+            </div>
+          </div>
+
+          <button type="button" class="btn7" id="add-experience-btn">
+            + Add Experience
+          </button>
         </div>
 
         <div>
@@ -205,6 +215,8 @@
           <input type="text" name="year" placeholder="Year of Passing">
         </div>
       </div>
+
+
 
       <div class="form-section">
         <h2>Projects</h2>
@@ -218,4 +230,5 @@
 
   <script src="{% static 'api/js/resume.js' %}"></script>
 </body>
+
 </html>

@@ -112,39 +112,42 @@ def get_jd(request):
     })
     
 
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+
 @csrf_exempt
 def build_resume(request):
     if request.method != "POST":
         return JsonResponse({"error": "POST request required"}, status=400)
-    
-    #  Personal Info
+
     full_name = request.POST.get("full_name")
     email = request.POST.get("email")
     phone = request.POST.get("phone")
     location = request.POST.get("location")
-    #  Summary
     summary = request.POST.get("summary")
-    # Skills 
+
     skills_raw = request.POST.get("skills", "")
     skills = [s.strip() for s in skills_raw.split(",") if s.strip()]
-    # Experience
-    job_title = request.POST.get("job_title")
-    company = request.POST.get("company")
-    experience_desc = request.POST.get("experience_desc")
-    # Education
+
+    job_titles = request.POST.getlist("job_title[]")
+    companies = request.POST.getlist("company[]")
+    descriptions = request.POST.getlist("experience_desc[]")
+
+    experience = []
+    for jt, comp, desc in zip(job_titles, companies, descriptions):
+        if jt or comp or desc:
+            experience.append({
+                "job_title": jt,
+                "company": comp,
+                "description": desc,
+            })
+
     degree = request.POST.get("degree")
     college = request.POST.get("college")
     year = request.POST.get("year")
-    # Projects
+
     projects_raw = request.POST.get("projects", "")
     projects = [p.strip() for p in projects_raw.split("\n") if p.strip()]
-    # Build structured resume data (IMPORTANT)
-    # Experience (as LIST)
-    experience = [{
-        "job_title": job_title,
-        "company": company,
-        "description": experience_desc,
-    }]
 
     resume_data = {
         "personal": {
@@ -155,7 +158,7 @@ def build_resume(request):
         },
         "summary": summary,
         "skills": skills,
-        "experience": experience,   # ✅ list now
+        "experience": experience,
         "education": {
             "degree": degree,
             "college": college,
@@ -166,11 +169,11 @@ def build_resume(request):
 
     request.session["resume_data"] = resume_data
 
-    
     return JsonResponse({
         "status": "success",
         "redirect_url": "/resume/preview/"
     })
+
 
 def resume_preview(request):
     resume_data = request.session.get("resume_data")

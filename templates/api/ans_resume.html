@@ -159,8 +159,7 @@
         <h2>Experience</h2>
         {% for exp in resume.experience %}
         <div class="block">
-            <p class="bold">{{ exp.job_title }}</p>
-            <p>{{ exp.company }}</p>
+            <p class="bold">{{ exp.job_title }} - {{ exp.company }}</p>
             <ul>
                 <li>{{ exp.description }}</li>
             </ul>
