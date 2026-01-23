@@ -115,5 +115,27 @@
     </footer>
     <script src="{% static 'api/js/script.js' %}"></script>
 
+    <div id="chat-icon">
+        <img src="{% static 'api/images/chatbot.png' %}">
+    </div>
+
+<div id="chat-panel">
+  <div id="chat-header">
+  <div class="chat-title">
+    <img src="{% static 'api/images/chatbot.png' %}" />
+    <span>JD Analyzer AI</span>
+  </div>
+  <button id="close-chat">✕</button>
+</div>
+
+<div id="chat-body"></div>
+
+<div id="chat-input-box">
+  <input type="text" placeholder="Type here..." />
+  <button>➤</button>
+</div>
+
+</div>
+
 </body>
 </html>

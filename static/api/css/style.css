@@ -1,6 +1,6 @@
 :root {
   --Primary: #3EE0CF;
-  --Dark-text: #0a2050;
+  --Dark-text: #0a4450;
   --Secondary-text: #2BC8CF;
   --Background: #080C16;
   --White: #FFFFFF;
@@ -13,7 +13,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -29,17 +30,20 @@ main {
   display: flex;
   flex-direction: column;
 }
+
 main .view1 {
   margin-top: 4rem;
   text-align: center;
   color: white;
 }
+
 main .view1 button {
   border: none;
   padding: 0.7rem;
   margin: 10px;
   outline: none;
 }
+
 main .view1 .btn1 {
   background-color: rgba(43, 199, 207, 0.2666666667);
   color: var(--Secondary-text);
@@ -48,23 +52,28 @@ main .view1 .btn1 {
   padding: 0.7rem;
   border-radius: 25px;
 }
+
 main .view1 .head {
   font-size: 1.5rem;
   line-height: 3rem;
 }
+
 main .view1 .head .h2 {
   color: var(--Secondary-text);
 }
+
 main .view1 .info {
   margin: 1.8rem 0rem;
   color: var(--gray);
   line-height: 1.7rem;
 }
+
 main .view1 .button {
   display: flex;
   flex-direction: column;
   margin: 0rem 1rem;
 }
+
 main .view1 .button .btn2 {
   border-radius: 10px;
   color: var(--Dark-text);
@@ -73,13 +82,16 @@ main .view1 .button .btn2 {
   background-color: var(--Secondary-text);
   transition: all 0.5s ease;
 }
+
 main .view1 .button .btn2 a {
   text-decoration: none;
 }
+
 main .view1 .button .btn2:hover {
   transform: scale(1.03);
   box-shadow: 1px 2px 10px white;
 }
+
 main .view1 .button .btn3 {
   border-radius: 10px;
   border: 1px solid var(--Secondary-text);
@@ -89,10 +101,12 @@ main .view1 .button .btn3 {
   font-size: 1rem;
   transition: all 0.5s ease;
 }
+
 main .view1 .button .btn3:hover {
   transform: scale(1.03);
   background-color: rgba(43, 199, 207, 0.4431372549);
 }
+
 main .analysis {
   display: flex;
   flex-direction: column;
@@ -101,45 +115,54 @@ main .analysis {
   gap: 2rem;
   justify-content: center;
 }
+
 main .analysis .b1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 main .analysis .b1 h1 {
   color: white;
   font-size: 2.5rem;
   text-shadow: 2px 2px 7px white;
   text-align: center;
 }
+
 main .analysis .b1 h3 {
   color: #b1afaf;
   font-size: 1.2rem;
 }
+
 main .analysis .b2 {
   display: flex;
   flex-direction: column;
 }
+
 main .analysis .b2 h1 {
   color: white;
   font-size: 2.5rem;
   text-shadow: 2px 2px 7px white;
   text-align: center;
 }
+
 main .analysis .b2 h3 {
   color: #b1afaf;
   font-size: 1.2rem;
 }
+
 main .features {
   text-align: center;
   margin-top: 5rem;
 }
+
 main .features button {
   border: none;
   padding: 0.7rem;
   margin: 10px;
   outline: none;
 }
+
 main .features .btn4 {
   background-color: rgba(43, 199, 207, 0.2666666667);
   color: var(--Secondary-text);
@@ -149,21 +172,26 @@ main .features .btn4 {
   padding: 0.7rem 2rem;
   border-radius: 25px;
 }
+
 main .features .head2 {
   color: white;
 }
+
 main .features .head2 .p1 {
   color: var(--Secondary-text);
 }
+
 main .features .info2 {
   color: gray;
   margin: 1rem 2rem;
   font-size: 1.3rem;
 }
+
 main .features .featu {
   display: flex;
   flex-direction: column;
 }
+
 main .features .featu .box1 {
   display: flex;
   flex-direction: column;
@@ -173,20 +201,24 @@ main .features .featu .box1 {
   transition: all 0.3s ease-in;
   border: 1px solid rgba(43, 199, 207, 0.2274509804);
 }
+
 main .features .featu .box1 img {
   height: 12rem;
   margin: 1rem;
   border-radius: 20px;
 }
+
 main .features .featu .box1 h1 {
   color: white;
   margin: 1rem 0rem;
   font-size: 1.5rem;
 }
+
 main .features .featu .box1 h3 {
   color: gray;
   margin: 1rem;
 }
+
 main .features .featu .box2 {
   display: flex;
   flex-direction: column;
@@ -196,20 +228,24 @@ main .features .featu .box2 {
   transition: all 0.3s ease-in;
   border: 1px solid rgba(43, 199, 207, 0.2274509804);
 }
+
 main .features .featu .box2 img {
   height: 12rem;
   margin: 1rem;
   border-radius: 20px;
 }
+
 main .features .featu .box2 h1 {
   color: white;
   margin: 1rem 0rem;
   font-size: 1.5rem;
 }
+
 main .features .featu .box2 h3 {
   color: gray;
   margin: 1rem;
 }
+
 main .features .featu .box3 {
   display: flex;
   flex-direction: column;
@@ -219,20 +255,24 @@ main .features .featu .box3 {
   transition: all 0.3s ease-in;
   border: 1px solid rgba(43, 199, 207, 0.2274509804);
 }
+
 main .features .featu .box3 img {
   height: 12rem;
   margin: 1rem;
   border-radius: 20px;
 }
+
 main .features .featu .box3 h1 {
   color: white;
   margin: 1rem 0rem;
   font-size: 1.5rem;
 }
+
 main .features .featu .box3 h3 {
   color: gray;
   margin: 1rem;
 }
+
 main .features .featu .box4 {
   display: flex;
   flex-direction: column;
@@ -242,48 +282,58 @@ main .features .featu .box4 {
   transition: all 0.3s ease-in;
   border: 1px solid rgba(43, 199, 207, 0.2274509804);
 }
+
 main .features .featu .box4 img {
   height: 12rem;
   margin: 1rem;
   border-radius: 20px;
 }
+
 main .features .featu .box4 h1 {
   color: white;
   margin: 1rem 0rem;
   font-size: 1.5rem;
 }
+
 main .features .featu .box4 h3 {
   color: gray;
   margin: 1rem;
 }
+
 main .features .featu .box1:hover {
   transform: scale(1.01);
   border: 1px solid #2BC8CF;
 }
+
 main .features .featu .box2:hover {
   transform: scale(1.01);
   border: 1px solid #2BC8CF;
 }
+
 main .features .featu .box3:hover {
   transform: scale(1.01);
   border: 1px solid #2BC8CF;
 }
+
 main .features .featu .box4:hover {
   transform: scale(1.01);
   border: 1px solid #2BC8CF;
 }
+
 main .jd {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 6rem;
 }
+
 main .jd button {
   border: none;
   padding: 0.7rem;
   margin: 10px;
   outline: none;
 }
+
 main .jd .btn5 {
   background-color: rgba(43, 199, 207, 0.2666666667);
   color: var(--Secondary-text);
@@ -292,14 +342,17 @@ main .jd .btn5 {
   padding: 0.8rem 1rem;
   border-radius: 25px;
 }
+
 main .jd h1 {
   color: white;
   font-size: 2rem;
   text-align: center;
 }
+
 main .jd h1 .p2 {
   color: var(--Secondary-text);
 }
+
 main .jd p {
   text-align: center;
   color: gray;
@@ -307,11 +360,13 @@ main .jd p {
   line-height: 1rem;
   margin-top: 1rem;
 }
+
 main .jd .jdanalyze {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
+
 main .jd .jdanalyze .bo1 {
   width: 20rem;
   display: flex;
@@ -321,6 +376,7 @@ main .jd .jdanalyze .bo1 {
   padding: 1rem;
   border-radius: 20px;
 }
+
 main .jd .jdanalyze .bo1 h1 {
   font-size: 1.4rem;
   color: var(--White);
@@ -328,6 +384,7 @@ main .jd .jdanalyze .bo1 h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
+
 main .jd .jdanalyze .bo1 textarea {
   background-color: rgba(8, 12, 22, 0.631372549);
   border: 1px solid rgba(62, 224, 208, 0.1725490196);
@@ -336,22 +393,27 @@ main .jd .jdanalyze .bo1 textarea {
   color: white;
   padding: 1rem;
 }
+
 main .jd .jdanalyze .bo1 textarea:hover {
   border: 1px solid rgba(62, 224, 208, 0.3843137255);
 }
+
 main .jd .jdanalyze .bo1 .btn6 {
   border-radius: 10px;
   background-color: var(--Secondary-text);
   transition: all 0.3s ease;
   box-shadow: 1px 2px 10px rgb(34, 34, 34);
 }
+
 main .jd .jdanalyze .bo1 .btn6:hover {
   transform: scale(1.01);
   box-shadow: 2px 2px 10px white;
 }
+
 main .jd .jdanalyze .bo1 hr {
   color: white;
 }
+
 main .jd .jdanalyze .bo2 {
   width: 20rem;
   display: flex;
@@ -361,6 +423,7 @@ main .jd .jdanalyze .bo2 {
   padding: 1rem;
   border-radius: 20px;
 }
+
 main .jd .jdanalyze .bo2 h1 {
   font-size: 1.4rem;
   color: var(--White);
@@ -369,12 +432,14 @@ main .jd .jdanalyze .bo2 h1 {
   text-align: center;
   margin-bottom: 0.5rem;
 }
+
 main .jd .jdanalyze .bo2 .skills {
   background-color: rgba(8, 12, 22, 0.631372549);
   border: 1px solid rgba(62, 224, 208, 0.1725490196);
   border-radius: 20px;
   padding: 1rem;
 }
+
 main .jd .jdanalyze .bo2 .skills #skills-p {
   background-color: rgba(43, 199, 207, 0.2666666667);
   color: var(--gray);
@@ -383,6 +448,7 @@ main .jd .jdanalyze .bo2 .skills #skills-p {
   padding: 0.7rem;
   border-radius: 25px;
 }
+
 main .jd .jdanalyze .bo2 .skills .skill-btn {
   background-color: rgba(43, 199, 207, 0.2666666667);
   color: var(--gray);
@@ -391,6 +457,7 @@ main .jd .jdanalyze .bo2 .skills .skill-btn {
   padding: 0.7rem;
   border-radius: 25px;
 }
+
 main .jd .jdanalyze .bo2 #experience p {
   background-color: rgba(43, 199, 207, 0.2666666667);
   color: var(--Secondary-text);
@@ -399,11 +466,13 @@ main .jd .jdanalyze .bo2 #experience p {
   padding: 0.7rem;
   border-radius: 25px;
 }
+
 main .jd .jdanalyze .bo2 #experience h2 {
   color: var(--gray);
   line-height: 1rem;
   font-size: 1rem;
 }
+
 main .jd .jdanalyze .bo2 #education p {
   background-color: rgba(43, 199, 207, 0.2666666667);
   color: var(--Secondary-text);
@@ -412,23 +481,27 @@ main .jd .jdanalyze .bo2 #education p {
   padding: 0.7rem;
   border-radius: 25px;
 }
+
 main .jd .jdanalyze .bo2 #education h2 {
   color: var(--gray);
   line-height: 1rem;
   font-size: 1rem;
 }
+
 main .jd .jdanalyze .bo2 #keywords {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   max-width: 25rem;
 }
+
 main .jd .jdanalyze .bo2 #keywords h2 {
   width: 100%;
   color: var(--gray);
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
+
 main .jd .jdanalyze .bo2 #keywords span {
   background-color: rgba(43, 199, 207, 0.2666666667);
   color: var(--Secondary-text);
@@ -447,59 +520,75 @@ main .jd .jdanalyze .bo2 #keywords span {
   main .view1 .btn1 {
     margin-bottom: 2.5rem;
   }
+
   main .view1 .head {
     font-size: 3rem;
     line-height: 5rem;
   }
+
   main .view1 .info {
     font-size: 1.3rem;
   }
+
   main .view1 .button {
     display: flex;
     flex-direction: column;
     flex-direction: row;
     justify-content: center;
   }
+
   main .features .btn4 {
     font-size: 2rem;
   }
+
   main .features .head2 {
     font-size: 1.8rem;
   }
+
   main .features .info2 {
     font-size: 1.4rem;
   }
+
   main .features .featu {
     display: flex;
     flex-direction: column;
     flex-direction: row;
   }
+
   main .features .featu .box1 {
     flex: 1;
   }
+
   main .features .featu .box2 {
     flex: 1;
   }
+
   main .features .featu .box3 {
     flex: 1;
   }
+
   main .features .featu .box4 {
     flex: 1;
   }
+
   main .jd h1 {
     font-size: 3rem;
   }
+
   main .jd p {
     font-size: 1.5rem;
   }
+
   main .jd .jdanalyze {
     flex-direction: row;
   }
 }
+
 footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 footer .footnav {
   display: flex;
   flex-direction: column;
@@ -507,17 +596,21 @@ footer .footnav {
   justify-content: space-between;
   margin: 1rem 0rem;
 }
+
 footer .footnav h1 {
   color: gray;
 }
+
 footer .footnav h1 .pa1 {
   color: #2BC8CF;
 }
+
 footer .footnav .links {
   text-align: center;
   display: flex;
   flex-direction: column;
 }
+
 footer .footnav .links a {
   text-decoration: none;
   color: gray;
@@ -527,16 +620,20 @@ footer .footnav .links a {
   flex-direction: column;
   flex-direction: row;
 }
+
 footer .footnav .links a:hover {
   color: var(--Primary);
 }
+
 footer .footnav .social {
   display: flex;
   flex-direction: column;
 }
+
 footer .footnav .social #git {
   color: white;
 }
+
 footer h6 {
   color: white;
   text-align: center;
@@ -548,4 +645,154 @@ footer h6 {
   footer .footnav .links {
     flex-direction: row;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*----chatbot------*/
+:root {
+  --accent: #2bc7cf;
+  --dark: #0b1220;
+  --dark-2: #101a2e;
+  --ink: #0a4450;
+}
+
+#chat-icon {
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid var(--Secondary-text);
+  background: radial-gradient(circle, rgba(43, 199, 207, .46), rgba(10, 32, 80, 0));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999999;
+  transition: .3s ease;
+}
+
+#chat-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+#chat-icon:hover {
+  transform: scale(1.03);
+  background-color: rgba(43, 199, 207, .44);
+}
+
+body.chat-open #chat-icon {
+  display: none;
+}
+
+#chat-panel {
+  position: fixed;
+  top: 20px;
+  right: -360px;
+  width: 350px;
+  height: calc(100vh - 40px);
+  background: var(--dark);
+  border: 1.5px solid var(--accent);
+  border-radius: 14px;
+  box-shadow: 0 0 5px rgba(43, 199, 207, .25);
+  transition: .25s ease;
+  z-index: 9998;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-panel.open {
+  right: 20px;
+}
+
+#chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: var(--accent);
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+}
+
+.chat-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.chat-title img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+#close-chat {
+  background: none;
+  border: 0;
+  color: var(--ink);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#chat-body {
+  flex: 1;
+  background: var(--dark);
+  padding: 14px;
+  overflow-y: auto;
+}
+
+#chat-input-box {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: var(--dark-2);
+  border-top: 1px solid var(--accent);
+}
+
+#chat-input-box input {
+  flex: 1;
+  background: var(--dark);
+  border: 1px solid var(--accent);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+}
+
+#chat-input-box button {
+  background: var(--accent);
+  border: 0;
+  color: var(--dark);
+  padding: 0 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.msg {
+  max-width: 75%;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.msg.user {
+  margin-left: auto;
+  background: var(--accent);
+  color: var(--dark);
+}
+
+.msg.bot {
+  margin-right: auto;
+  background: #1a2440;
+  color: #fff;
+  border: 1px solid var(--accent);
+}
