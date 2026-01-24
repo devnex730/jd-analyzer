@@ -5,16 +5,9 @@ import google.generativeai as genai
 import traceback
 import os
 
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
+genai.configure(api_key="AIzaSyCC8OO2r-RPftBFMBYqEDjt_y-t0CfZVTw")
 model = genai.GenerativeModel(
-    "gemini-2.5-flash-lite",
-    system_instruction="""
-    Answer in only plain text.
-    You are JD Analyzer chatbot.
-    Give SHORT, CRISP answers.
-    Use bullet points.
-    No long theory explanations.
-    """
+    "gemma-3-27b-it",
 )
 
 
@@ -26,7 +19,14 @@ class ChatConsumer(AsyncWebsocketConsumer):
     async def receive(self, text_data):
         try:
             data = json.loads(text_data)
-            msg = data.get("message")
+            msg = ("""
+                Answer in only plain text.
+                You are helper chatbot.
+                Give SHORT, CRISP answers.
+                Use bullet points.
+                No long theory explanations.
+                """
+                   +data.get("message"))
             res = await sync_to_async(self.chat.send_message)(msg)
             await self.send(json.dumps({"reply": res.text}))
 
