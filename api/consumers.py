@@ -5,8 +5,7 @@ import google.generativeai as genai
 import traceback
 import os
 
-genai.configure(api_key="AIzaSyCC8OO2r-RPftBFMBYqEDjt_y-t0CfZVTw")
-model = genai.GenerativeModel(
+genai.configure(api_key=os.environ.get("GOOGLE_GEMMA_API"))model = genai.GenerativeModel(
     "gemma-3-27b-it",
 )
 
