@@ -1,11 +1,12 @@
 from channels.generic.websocket import AsyncWebsocketConsumer
 from asgiref.sync import sync_to_async
 import json
-import google.generativeai as genai
+import google.genai as genai
 import traceback
 import os
 
-genai.configure(api_key=os.environ.get("GOOGLE_GEMMA_API"))model = genai.GenerativeModel(
+genai.configure(api_key=os.environ.get("GOOGLE_GEMMA_API"))
+model = genai.GenerativeModel(
     "gemma-3-27b-it",
 )
 
