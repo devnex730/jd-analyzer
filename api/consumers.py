@@ -27,7 +27,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
                 """
                    +data.get("message"))
             res = await sync_to_async(client.models.generate_content)(
-                model = "gemma-2-9b-it",
+                model = "gemma-3-27b-it",
                 contents = msg)
             await self.send(json.dumps({"reply": res.text}))
 
