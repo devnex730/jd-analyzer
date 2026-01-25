@@ -1,19 +1,20 @@
 from channels.generic.websocket import AsyncWebsocketConsumer
 from asgiref.sync import sync_to_async
 import json
-from google import genai
+import google.generativeai as genai
 import traceback
 import os
-client = genai.Client(api_key=os.environ.get("GOOGLE_GEMMA_API"))
 
+genai.configure(api_key=os.environ.get("GOOGLE_GEMMA_API"))
+model = genai.GenerativeModel(
+    "gemma-3-27b-it",
+)
 
 
 class ChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         await self.accept()
-        from api.ml import train_once
-        await train_once()
-
+        self.chat = model.start_chat(history=[])
 
     async def receive(self, text_data):
         try:
@@ -26,9 +27,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
                 No long theory explanations.
                 """
                    +data.get("message"))
-            res = await sync_to_async(client.models.generate_content)(
-                model = "gemma-3-27b-it",
-                contents = msg)
+            res = await sync_to_async(self.chat.send_message)(msg)
             await self.send(json.dumps({"reply": res.text}))
 
         except Exception as e:
