@@ -4,6 +4,7 @@ import json
 from google import genai
 import traceback
 import os
+from api.ml import train_once
 
 client = genai.Client(api_key=os.environ.get("GOOGLE_GEMMA_API"))
 
@@ -12,6 +13,8 @@ client = genai.Client(api_key=os.environ.get("GOOGLE_GEMMA_API"))
 class ChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         await self.accept()
+        await train_once()
+
 
     async def receive(self, text_data):
         try:
